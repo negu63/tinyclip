@@ -2,14 +2,12 @@
 
 Cog prediction code for deploying TinyCLIP to [Replicate](https://replicate.com/).
 
----
 
 ## Replicate Model
 
 Try the model on Replicate:  
 [TinyCLIP](https://replicate.com/negu63/tinyclip) 📎
 
----
 
 **Note:**  
 This model runs on CPU hardware. 🖥️  
