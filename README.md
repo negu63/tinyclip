@@ -7,7 +7,7 @@ Deployed on [Replicate](https://replicate.com/negu63/tinyclip).
 
 ## How to Use
 
-**Inputs**
+**Inputs**  
 At least one of the following is required:
 
 - **`url`** (string, optional): A publicly accessible image URL.  
@@ -18,7 +18,7 @@ At least one of the following is required:
 > - If both `url` and `image_base64` are provided, only `image_base64` will be used.  
 > - At least one input is required.  
 
-**Outputs**
+**Outputs**  
 Depending on your input, the model returns:
 
 - **`image_vector`** (array of 512 floats): The embedding vector for the provided image (if any).  
