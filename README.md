@@ -31,8 +31,8 @@ If only one input is given, only the corresponding vector is returned.
     - TinyCLIP preprocesses images to 224x224 pixels for inference.
     - To minimize cloud inference time, resize and crop your image locally to 224x224 (keeping aspect ratio), then encode as base64.
     - This avoids extra download and resize steps, making predictions faster.
-- **Image URLs:**
-    - You can still use image URLs. The model will download, resize, and process the image automatically.
+- **Image URL:**
+    - You can still use image URL. The model will download, resize, and process the image automatically.
 
 
 ## Performance \& Precision
