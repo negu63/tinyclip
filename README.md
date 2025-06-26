@@ -1,44 +1,41 @@
 # TinyCLIP-ViT-8M-16-Text-3M-YFCC15M Embeddings 🚀
 
-A lightweight model for generating 512-dimensional embeddings from images and/or text. Deployed on [Replicate](https://replicate.com/negu63/tinyclip).
+A lightweight model for generating 512-dimensional embeddings from images and/or text.
+Deployed on [Replicate](https://replicate.com/negu63/tinyclip).
 
 ## How to Use
 
-**Inputs:**
-You can provide:
+**Inputs**
+At least one of the following is required:
 
-- **Image URL** (for hosted images)
-- **Base64-encoded image** (for quick inference)
-- **Text** (for text embeddings)
+- **`url`** (string, optional): A publicly accessible image URL.
+- **`image_base64`** (string, optional): A base64-encoded image string.
+- **`text`** (string, optional): Any text string for embedding.
 
-**Outputs:**
+> **Note:**
+> - If both `url` and `image_base64` are provided, only `image_base64` will be used.
+> - At least one input is required.
 
-- **If both image and text are provided:**
-    - `image_vector`: 512D embedding of the image
-    - `text_vector`: 512D embedding of the text
-- **If only one is provided:**
-    - Only the corresponding vector is returned
+**Outputs**
+Depending on your input, the model returns:
 
-**Priority:**
-If both image URL and base64 image are given, the base64 image is used.
+- **`image_vector`** (array of 512 floats): The embedding vector for the provided image (if any).
+- **`text_vector`** (array of 512 floats): The embedding vector for the provided text (if any).
 
-## Why Use Base64 Images?
+If both image and text are provided, both vectors are returned.
+If only one input is given, only the corresponding vector is returned.
 
-TinyCLIP preprocesses images to 224x224 pixels for inference.
-To minimize cloud inference time, you can resize and crop your image locally to 224x224, then encode it as base64.
-This avoids the download and resize steps on the server, making predictions faster and more efficient!
+## Best Practices
 
-**Best practice for base64 images:**
+- **Base64 Images:**
+    - TinyCLIP preprocesses images to 224x224 pixels for inference.
+    - To minimize cloud inference time, resize and crop your image locally to 224x224 (keeping aspect ratio), then encode as base64.
+    - This avoids extra download and resize steps, making predictions faster.
+- **Image URLs:**
+    - You can still use image URLs. The model will download, resize, and process the image automatically.
 
-- Resize the shorter side of your image to 224px (keeping aspect ratio)
-- Crop the center to 224x224px
-- Encode the result as base64
 
-## Still Accepts Image URLs
-
-You can still use image URLs. The model will download, resize, and process the image automatically.
-
-Performance & Precision
+## Performance \& Precision
 
 This model is designed for speed and simplicity, not ultra-high accuracy.
 The returned embeddings are in full precision (float32), but you can use or store them as half-precision (float16) if desired—this is efficient and works well for most use cases!
