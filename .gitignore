@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and checkpoints
+.cache/
+*.ckpt
+*.pth
+*.pt
+*.npz
+*.npy
+*.h5
+*.onnx
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VSCode settings
+.vscode/
+
+# Cog build artifacts
+.cog/
+
+# Model weights and large files
+weights/
+
+# Environment files
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test outputs
+*.log
+*.out
+
+# Python virtual environments
+venv/
+.env/
+
+# Ignore local test images
+*.webp
+*.jpg
+*.jpeg
+*.png
+
+# Ignore temporary files
+*.tmp
+*.bak
+~*
+
+# Ignore Replicate secrets (if any)
+replicate.yaml
