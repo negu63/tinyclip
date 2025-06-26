@@ -27,14 +27,17 @@ Depending on your input, the model returns:
 If both image and text are provided, both vectors are returned.  
 If only one input is given, only the corresponding vector is returned.
 
-## Best Practices
+## Best Practices  
 
-- **Base64 Images:**
-    - TinyCLIP preprocesses images to 224x224 pixels for inference.  
-    - To minimize cloud inference time, resize and crop your image locally to 224x224 (keeping aspect ratio), then encode as base64.  
-    - This avoids extra download and resize steps, making predictions faster.  
-- **Image URL:**
-    - You can still use image URL. The model will download, resize, and process the image automatically.  
+- **Base64 Images:**  
+    - TinyCLIP uses images preprocessed to 224x224 pixels for inference.  
+    - **To prepare your image:**  
+        - **Resize the shorter side of your image to 224 pixels** while maintaining the original aspect ratio.  
+        - **Crop the center of the resized image** to exactly 224x224 pixels.  
+        - **Encode the resulting image as base64.**  
+    - This process avoids extra download and resize steps on the server, making predictions much faster.  
+- **Image URL:**  
+    - You can still use an image URL. In this case, the model will automatically download the image, preprocess it as described above, and run inference.
 
 
 ## Performance \& Precision
