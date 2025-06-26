@@ -1,6 +1,6 @@
 # TinyCLIP-ViT-8M-16-Text-3M-YFCC15M Embeddings 🚀
 
-<img src="https://github.com/user-attachments/assets/1ba89e72-f86c-4dd3-b272-51d7c80424ed" width="20%" alt="tinyclip-cover">
+<img src="https://github.com/user-attachments/assets/f01fe5fe-9ec3-467c-a880-3996f04184e4" width="20%" alt="tinyclip-cover">
 
 A lightweight model for generating 512-dimensional embeddings from images and/or text.  
 Deployed on [Replicate](https://replicate.com/negu63/tinyclip).
