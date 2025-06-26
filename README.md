@@ -42,5 +42,5 @@ The returned embeddings are in full precision (float32), but you can use or stor
 
 ⚡ **Have fun embedding!**
 
-🚀 **Try it now:** [TinyCLIP on Replicate](https://replicate.com/negu63/tinyclip)
+🚀 **Try it now:** [TinyCLIP on Replicate](https://replicate.com/negu63/tinyclip)  
 🔗 **GitHub:** [TinyCLIP for Replicate](https://github.com/negu63/tinyclip)
