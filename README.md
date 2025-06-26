@@ -1,6 +1,6 @@
 # TinyCLIP-ViT-8M-16-Text-3M-YFCC15M Embeddings 🚀
 
-A lightweight model for generating 512-dimensional embeddings from images and/or text.
+A lightweight model for generating 512-dimensional embeddings from images and/or text.  
 Deployed on [Replicate](https://replicate.com/negu63/tinyclip).
 
 ## How to Use
@@ -22,7 +22,7 @@ Depending on your input, the model returns:
 - **`image_vector`** (array of 512 floats): The embedding vector for the provided image (if any).
 - **`text_vector`** (array of 512 floats): The embedding vector for the provided text (if any).
 
-If both image and text are provided, both vectors are returned.
+If both image and text are provided, both vectors are returned.  
 If only one input is given, only the corresponding vector is returned.
 
 ## Best Practices
@@ -37,7 +37,7 @@ If only one input is given, only the corresponding vector is returned.
 
 ## Performance \& Precision
 
-This model is designed for speed and simplicity, not ultra-high accuracy.
+This model is designed for speed and simplicity, not ultra-high accuracy.  
 The returned embeddings are in full precision (float32), but you can use or store them as half-precision (float16) if desired—this is efficient and works well for most use cases!
 
 ⚡ **Have fun embedding!**
